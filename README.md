@@ -6,6 +6,12 @@ Pyper is built upon [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpa
 
 
 ## Generate Data
+Set OpenAI API Key first.
+
+```
+    export OPENAI_API_KEY=<your-api-key>
+```
+
 To run with default arguments:
 
 ```
