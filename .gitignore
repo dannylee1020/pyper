@@ -1,0 +1,10 @@
+__pycache__
+.env
+.python-version
+.venv
+test.py
+dist/
+test_env/
+site/
+.DS_Store
+venv
