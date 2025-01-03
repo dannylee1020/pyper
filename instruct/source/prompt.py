@@ -30,7 +30,7 @@ Here are the requirements:
 6. Not all instructions require input. For example, when a instruction asks about some general information, "what is the highest peak in the world", it is not necssary to provide a specific context. In this case, put "<noinput>" in the input field.
 7. The output should be an appropriate response to the instruction and the input. Make sure the output is less than 100 words.
 8. Instructions must accurately reflect domain-specific terminology and concepts
-9. Generate tasks across difficulty levels (foundational, intermediate, expert)
+9. Generate tasks across difficulty levels (beginner, intermediate, expert)
 10. Tasks should provide balanced coverage across provided domain concepts (minimum 80% coverage)
 11. Input data should reflect authentic scenarios from the domain
 12. Where applicable, specify any domain-specific constraints or success criteria

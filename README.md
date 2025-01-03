@@ -1,11 +1,9 @@
 # Pyper
-Pyper generates high-quality instruction data with domain knowledge for LLM fine-tuning.
+Pyper is a knowledge-driven data generation framework for building unbiased, high quality synthetic dataset.
 
 ## Overview
-Pyper is built upon [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca/tree/main), with some changes in generation logics. It is capable of supplying specific knowledge to the data generation process, which helps model to build unbiased, ground truth dataset.
+Pyper is built upon [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca/tree/main), with some changes in data generation logics. It is capable of supplying domain knowledge to the data generation process, overcoming inherent bias in LLM's knowledge base.
 
-
-## Generate Data
 Set OpenAI API Key first.
 
 ```
