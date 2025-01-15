@@ -28,12 +28,14 @@ poetry install
 
 ```
 pyper/
-├── fission/           # Data fission implementation
+├── data/             # output path for result dataset
+├── fission/          # Data fission implementation
 ├── gen/              # Core generation modules
 │   ├── batch/        # Batch processing utilities
 │   ├── prompt/       # Prompt templates
 │   └── src/          # Source generators
 └── source/           # Source data and examples
+
 ```
 
 ## Usage
