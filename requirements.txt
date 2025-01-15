@@ -1,4 +1,0 @@
-openai
-tqdm
-rouge-score
-fire
