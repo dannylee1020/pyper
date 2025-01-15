@@ -8,3 +8,4 @@ test_env/
 site/
 .DS_Store
 venv
+temp/
