@@ -1,11 +1,11 @@
 from typing import List
 
-import model
-from prompt import knowledge_prompt as prompt
 from tqdm import tqdm
 
 from pyper.llm_api import make_llm_request
 
+from .. import model
+from ..prompt import knowledge_prompt as prompt
 from .base_generator import BaseGenerator
 
 
@@ -58,7 +58,7 @@ class KnowledgeGenerator(BaseGenerator):
         print("generating answers...")
         answers = self._generate_answers(question_tasks=clean_tasks)
 
-        return clean_tasks, answers
+        return self._build_dataset(clean_tasks, answers)
 
     def _generate_syllabus(self, knowledge_path: str, max_sessions: int = 3) -> List:
         """Generate a syllabus based on provided knowledge content.

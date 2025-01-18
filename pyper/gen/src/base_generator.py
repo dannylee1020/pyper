@@ -100,6 +100,18 @@ class BaseGenerator(ABC):
                 }
                 f.write(json.dumps(d) + "\n")
 
+    def _build_dataset(self, questions: List, answers: List) -> List:
+        res = []
+        for q, a in zip(questions, answers):
+            res.append(
+                {
+                    "instruction": q["question"],
+                    "input": q["input"],
+                    "output": a["answer"],
+                }
+            )
+        return res
+
     @abstractmethod
     def _build_question_prompt(self, **kwargs):
         """Build question generation prompt - to be implemented by subclasses"""
