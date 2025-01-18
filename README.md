@@ -4,9 +4,9 @@ Pyper is a framework for generating high-quality synthetic data specifically des
 
 ## Features
 
-- **General Seed Generation**: Generate seed data across various academic disciplines using an approach inspired by GLAN
+- **General Seed Generation**: Generate seed data across various academic disciplines
 - **Knowledge-Driven Generation**: Create datasets based on specific domain knowledge by supplying ground truth information
-- **Data Fission**: Expand small seed datasets through iterative generation using LLM, inspired by self-instruct and evol-instruct methodologies
+- **Data Fission**: Expand small seed datasets through iterative generation using LLM
 
 ## Installation
 
@@ -24,20 +24,7 @@ cd pyper
 poetry install
 ```
 
-## Project Structure
-
 ```
-pyper/
-├── data/             # output path for result dataset
-├── fission/          # Data fission implementation
-├── gen/              # Core generation modules
-│   ├── batch/        # Batch processing utilities
-│   ├── prompt/       # Prompt templates
-│   └── src/          # Source generators
-└── source/           # Source data and examples
-
-```
-
 ## Usage
 
 ### Environment Setup
