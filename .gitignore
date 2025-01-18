@@ -9,5 +9,3 @@ site/
 .DS_Store
 venv
 temp/
-data/*
-!data/.gitkeep
