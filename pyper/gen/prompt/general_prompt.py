@@ -19,11 +19,22 @@ Generation Guideline:
 """
 
 generate_question = """
-Based on the class session(s) {session} and key concepts {concepts}, generate exactly {batch} homework questions.
+Based on the class session(s) {session} and key concepts {concepts}, generate exactly {batch} homework tasks.
 
 Generation Guideline:
-1. Generate an appropriate input to the question. The input field should contain a specific example provided for the question. It should involve realistic data and should not contain simple placeholders. The input should provide substantial content to make the question challenging.
-2. Not all questions require input. For example, when a question asks about some general information, "what is the highest peak in the world", it is not necssary to provide a specific context. In this case, put "" in the input field.
+1. Generate an appropriate input to the question. The input field should contain a specific example provided for the question. If input is not necessary, return ""
+
+<example>
+Instruction: What is the relation between the given pairs?
+Input: Night : Day :: Right : Left
+Output: The relation between the given pairs is that they are opposites.
+
+Instruction: Generate a haiku using the following word
+Input: summer
+Output: The chill, worming in\nShock, pleasure, bursting within\nSummer tongue awakes
+</example>
+
+2. Generate balanced number of tasks with and without the input field.
 3. Vary the style of the questions by generating each type where applicable: Remeber, Understand, Apply, Analyze and Evaluate.
 4. Questions have varying difficulty from easy, medium and hard
 5. Questions are concise with maximum of {max_tokens} tokens.

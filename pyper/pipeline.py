@@ -29,6 +29,7 @@ class KnowledgeConfig:
 class FissionConfig:
     num_tasks: int
     seed_path: str
+    batch: int
     num_seed: int
     num_generated: int
 
@@ -69,8 +70,8 @@ class Pipeline:
 
     def run(
         self,
-        seed_output_path: str,
-        result_output_path: str,
+        seed_output_path: str = None,
+        result_output_path: str = None,
         gen_config: Union[GeneralConfig, KnowledgeConfig] = None,
         fission_config: FissionConfig = None,
     ) -> None:
@@ -84,8 +85,8 @@ class Pipeline:
             ValueError: If the generator type doesn't match the config type
         """
         # Generate seed data based on generator type
-        print("Starting seed generation...")
         if self.gen:
+            print("Starting seed generation...")
             generator = self.gen()
             if isinstance(self.gen, (type(GeneralGenerator))):
                 if not isinstance(gen_config, GeneralConfig):

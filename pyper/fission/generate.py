@@ -152,12 +152,11 @@ class FissionGenerator:
 
         return parsed
 
-    # TODO: add batch for # of questions generated per iteration
-    # ? evolving tasks is bound to the number of tasks being sampled. How can I improve this?
     def generate(
         self,
         num_tasks: int,
         seed_path: str,
+        batch: int,
         num_seed: int,
         num_generated: int,
     ) -> List:
@@ -166,6 +165,7 @@ class FissionGenerator:
         Args:
             num_tasks (int): Total number of items to generate
             seed_path (str): Path to seed data file
+            batch (int): How many tasks to generate for each iteration
             num_seed (int): Number of seed tasks to sample in each iteration
             num_generated (int): Number of generated tasks to sample in each iteration
 
@@ -177,6 +177,7 @@ class FissionGenerator:
         collection = self._initialize_chroma(seed_pool)
         clean_tasks = []
         gen_pool = []
+        num_q = int(batch // 2)
 
         with tqdm(total=num_tasks) as pbar:
             print("starting generation...")
@@ -193,12 +194,12 @@ class FissionGenerator:
                 with ThreadPoolExecutor(max_workers=2) as executor:
                     future_breadth = executor.submit(
                         self._generate_breadth,
-                        batch=batch,
+                        batch=num_q,
                         instructions=parsed_sample,
                     )
                     future_depth = executor.submit(
                         self._generate_depth,
-                        batch=batch,
+                        batch=batch - num_q,
                         instructions=parsed_sample,
                     )
 

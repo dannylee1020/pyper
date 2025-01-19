@@ -1,6 +1,6 @@
 # Pyper
 
-Pyper is a framework for generating high-quality synthetic data specifically designed for LLM finetuning. It combines several research approaches to create diverse and high-quality training datasets.
+Pyper is a framework for generating high-quality synthetic data for LLM instruction tuning. It combines several research approaches to create diverse and high-quality training datasets.
 
 ## Features
 
@@ -24,7 +24,6 @@ cd pyper
 poetry install
 ```
 
-```
 ## Usage
 
 ### Environment Setup
