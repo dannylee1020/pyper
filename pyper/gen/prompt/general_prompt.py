@@ -10,7 +10,7 @@ Generation guideline:
 """
 
 generate_syllabus = """
-You are an expert professor tasked with creating educational syllabus. Create a detailed syllabus for the subject "{subject}" at the {level} level.
+You are an expert tasked with creating syllabus. Create a detailed syllabus for the subject: {subject} at the level: {level}
 
 Generation Guideline:
 1. The syllabus should be broken down into multiple class sessions, each covering different key concepts.
@@ -42,7 +42,7 @@ Output: The chill, worming in\nShock, pleasure, bursting within\nSummer tongue a
 
 
 generate_answer = """
-Answer the question. Keep the answer short and concise. The topic, level, and subtopic of this question are as follows.
+Answer the question correctly and logically. Make your answer short and concise.
 
 ## Question: {question}
 ## Input: {input}
@@ -50,4 +50,6 @@ Answer the question. Keep the answer short and concise. The topic, level, and su
 Generation Guideline:
 1. Respond "DO NOT KNOW" if not sure about the answer.
 2. Answers are concise with the maximum length of {max_tokens} tokens.
+
+Only generate characters that are not JSON control characters (\u0000-\u001F).
 """

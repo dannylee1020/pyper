@@ -11,7 +11,7 @@ Generation Guideline:
 """
 
 generate_question = """
-Based on the class session(s) {session} and key concepts {concepts}, generate exactly {batch} homework questions.
+Based on the class session(s) {session} and key concepts {concepts}, generate exactly {batch} questions.
 
 Generation Guideline:
 1. Generate an appropriate input to the question. The input field should contain a specific example provided for the question. It should involve realistic data and should not contain simple placeholders. The input should provide substantial content to make the question challenging.
@@ -24,7 +24,7 @@ Generation Guideline:
 
 
 generate_answer = """
-Answer the question. Keep the answer short and concise. The topic, level, and subtopic of this question are as follows.
+Answer the question correctly and logically. Make answers short and concise.
 
 ## Question: {question}
 ## Input: {input}
