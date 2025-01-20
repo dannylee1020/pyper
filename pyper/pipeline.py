@@ -11,10 +11,10 @@ from gen.src.knowledge_generator import KnowledgeGenerator
 class GeneralConfig:
     discipline: str
     num_tasks: int
-    max_subjects: int
-    max_subtopics: int
-    max_sessions: int
     num_questions: int
+    max_subjects: int = 5
+    max_subtopics: int = 3
+    max_sessions: int = 5
 
 
 @dataclass
@@ -29,9 +29,9 @@ class KnowledgeConfig:
 class FissionConfig:
     num_tasks: int
     seed_path: str
-    batch: int
-    num_seed: int
-    num_generated: int
+    batch: int = 20
+    num_seed: int = 6
+    num_generated: int = 2
 
 
 class Pipeline:
