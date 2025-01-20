@@ -39,7 +39,7 @@ export OPENAI_API_KEY=your-openai-api-key
 Generate seed data for a specific academic discipline:
 
 ```bash
-poetry run python main.py generate --discipline mathematics --num-tasks 50
+python run.py generate --mode general --discipline mathematics --num-tasks 50
 ```
 
 Example disciplines include mathematics, physics, chemistry, etc. Use `--help` to see all options.
@@ -49,8 +49,7 @@ Example disciplines include mathematics, physics, chemistry, etc. Use `--help` t
 Generate data using specific domain knowledge:
 
 ```bash
-poetry run python main.py generate_with_knowledge \
-    --name project_name \
+python run.py generate --mode knowledge \
     --knowledge-path ./path/to/knowledge.txt \
     --num-tasks 50
 ```
@@ -62,10 +61,9 @@ The knowledge file should contain the ground truth information in plain text for
 Expand an existing seed dataset:
 
 ```bash
-poetry run python main.py generate \
-    --name dataset_name \
+python run.py fission \
     --num-tasks 50 \
-    --output-dir ./output
+    ---seed-path path/to/seed \
 ```
 
 To see all available options, use `--help` flag
