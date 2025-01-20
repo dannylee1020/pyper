@@ -46,6 +46,9 @@ class BaseGenerator(ABC):
                 frequency_penalty=random.choice([0.6, 0.8, 1.0, 1.2]),
             )
             questions.extend(res["questions"])
+
+            print(res)
+            print("")
         return questions
 
     def _process_single_answer(self, question: Dict, max_tokens: int = 150) -> Dict:

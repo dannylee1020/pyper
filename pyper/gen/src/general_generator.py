@@ -1,7 +1,6 @@
 import json
 from typing import List
 
-import fire
 from tqdm import tqdm
 
 from pyper.llm_api import make_llm_request
